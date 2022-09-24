@@ -8,6 +8,7 @@ public class Main {
         AStarAlgorithm algorithm = new AStarAlgorithm();
         String start, destination;
 
+        // gathering user input
         while (true) {
             System.out.println("Enter your starting point:");
             System.out.println("--------------------------");
@@ -32,6 +33,7 @@ public class Main {
             System.out.println("<<<Town is not a known, please try again>>>");
         }
 
+        // runs algorithm and catches exception if unable to find route
         try {
             ArrayList<String> path = algorithm.execute(start, destination);
 

@@ -37,9 +37,11 @@ public class Main {
         try {
             ArrayList<String> path = algorithm.execute(start, destination);
 
+            System.out.println("\nTraveling from " + start + " to " + destination + ":");
             for (String item : path) {
-                System.out.println(item);
+                System.out.print(item + " -> ");
             }
+            System.out.println("DONE");
         }
         catch (Exception e) {
             System.out.println(e);
